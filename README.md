@@ -1,5 +1,5 @@
 # Landing Page Project
-Landing page with auto-generated navigation and user click and scroll events handling
+Landing page with auto-generated navigation and click and scroll events handling
 
 ## Version
 1.0
