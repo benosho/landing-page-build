@@ -25,6 +25,3 @@ JavaScript for Landing Page project.
 - Hides navigation when user stops scrolling page
 - Adds a scroll to top button that is only visible when the user scrolls below the fold of the page.
 - Adds toggle function that expands or collapses a section when toggle button is clicked.
-
-## Attribution
-Written by Gbenga Oso on the Udacity Frontend Developer Course
