@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- IDs are used for sections to connect menu achors to sections. The "navbar-toggle" class is used to toggle
+  the display of menu items on mobile devices with viewport width < 768px -->
+  <header class="page-header">
+    <nav class="navbar-menu">
+      <a class="navbar-toggle" aria-expanded="false"><i class="fa fa-bars"></i></a>
+      <!-- Navigation starts as empty unorderd list that is auto-populated with JS -->
+      <ul id="navbar-list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main-hero">
+      <img src="images/logo.png">
+      <h1>Landing Pages That Convert.</h1>
+      <p>Succeed in Your Marketing with plug and play templates that deliver.
+        <button type="button" class="cta-button" role="button">Apply Now</button>
+      </p>
+    </header>
+    <!-- Each Section has an ID and a data attribute. The data attribute is used to auto-populate
+    the li nodes of the navigation bar. The first section is set to the "active" class by default.
+    The h2 headings of each section when clicked toggles the display of content in each section -->
+    <section id="section1" data-nav="Features" class="active">
+      <div class="landing-container">
+        <header class=section-header>
+          <button type="button" class="toggle-button" role="switch" aria-expanded="true">-</button>
+          <h2>Features</h2>
+        </header>
+        <div class="section-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+            dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
+            Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum,
+            nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus
+            imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt
+            felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero
+            ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+          <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+            luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+            porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section2" data-nav="Made by Experts">
+      <div class="landing-container">
+        <header class=section-header>
+          <h2>Made by Experts</h2>
+          <button type="button" class="toggle-button" role="switch" aria-expanded="true">-</button>
+        </header>
+        <div class="section-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+            dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
+            Phasellus
+            imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+            bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+            elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed
+            leo
+            nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.</p>
+          <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+            luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+            porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="Reviews">
+      <div class="landing-container">
+        <header class=section-header>
+          <button type="button" class="toggle-button" role="switch" aria-expanded="true">-</button>
+          <h2>Reviews</h2>
+        </header>
+        <div class="section-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+            dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
+            Phasellus
+            imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+            bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+            elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed
+            leo
+            nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.</p>
+          <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+            luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+            porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
+      </div>
+    </section>
+    <section id="section4" data-nav="Get Started">
+      <div class="landing-container">
+        <header class=section-header>
+          <h2>Get Started</h2>
+          <button type="button" class="toggle-button" role="switch" aria-expanded="true">-</button>
+        </header>
+        <div class="section-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+            dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
+            Phasellus
+            imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+            bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+            elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed
+            leo
+            nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.</p>
+          <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+            luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+            porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <p>&copy 2021 Marketspace. All Rights Reserved.</p>
+    <!-- The Scroll to the Top button when clicked returns the user to the top of the page -->
+    <button id="scroll-to-top" title="Scroll to top" role="button">Top</button>
+  </footer>
+  <!-- Link to the JS file -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

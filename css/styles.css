@@ -1,0 +1,444 @@
+/* Load Font Awesome icons */
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css";
+
+/* ---- Base Rules ---- */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+/* Typeography General */
+h1 {
+    color: #041956;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2.5em;
+    margin: 2em 1rem 0;
+    max-width: 70%;
+}
+
+h2 {
+    /*border-bottom: 1px solid #fefe63;*/
+    color: #fff;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 2em;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+    padding-bottom: 0.2em;
+}
+
+p {
+    color: #eee;
+    line-height: 1.6em;
+}
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 0 0 10vh;
+}
+
+.main-hero {
+    background-image: url(../images/landing-page-development-1.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 55vh;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    align-items: left;
+}
+
+.main-hero img {
+    margin: 3em 1em 0 1em;
+    width: 200px;
+}
+
+.main-hero p {
+	color: #000;
+	font-size: 1.2em;
+	margin: 0 1rem;
+	width: 50%;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .main-hero {
+        background-image: url(../images/landing-page-development-2.jpg);
+    }
+
+    h1 {
+        font-size: 3em;
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3em;
+        max-width: 50%;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .main-hero {
+        background-image: url(../images/landing-page-development-3.jpg);
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    h1 {
+        font-size: 4em;
+        margin: 1em 4rem 1em;
+        max-width: 50%;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .main-hero {
+        background-image: url(../images/landing-page-development-4.jpg);
+    }
+
+    .main-hero p {
+        margin: 0 4rem;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    h1 {
+        font-size: 4em;
+        margin: 1em 4rem 1em;
+        max-width: 50%;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .main-hero {
+        background-image: url(../images/landing-page-development-4.jpg);
+    }
+
+    .main-hero p {
+        margin: 0 4rem;
+    }
+}
+
+section {
+    min-height: 40vh;
+    position: relative;
+}
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles */
+.navbar-menu ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    min-height: 8vh;
+    padding-left: 0;
+    text-align: right;
+}
+
+.navbar-menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-menu .menu-link {
+    color: #000;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 1.5em;
+    text-decoration: none;
+}
+
+.navbar-menu .menu-link:hover,
+.navbar-menu .menu-link.active {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.navbar-menu .navbar-toggle {
+    display: none;
+}
+
+/* Navigation Styles for Mobile Devices with viewport width < 768px */
+.navbar-menu-mobile {
+    background-color: #464748;
+    overflow: hidden;
+    position: relative;
+  }
+
+.navbar-menu-mobile #navbar-list {
+    display: none;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbar-menu-mobile #navbar-list a {
+    color: #fff;
+    display: block;
+    font-size: 17px;
+    padding: 14px;
+    text-decoration: none;
+}
+.navbar-menu-mobile #navbar-list .active {
+    background-color: #cbdefd;
+    color: #464748;
+}
+
+.navbar-menu-mobile .navbar-toggle {
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-menu-mobile .navbar-toggle i {
+    color: #000;
+    font-size: 24px;
+    padding: 1em;
+}
+
+/* Header Styles */
+.page-header {
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    opacity: 1;
+	position: fixed;
+	top: 0;
+	transition: opacity 0.3s ease;
+	width: 100%;
+	z-index: 5;
+}
+
+.page-header:hover {
+    opacity: 1 !important;
+}
+
+/* Footer Styles */
+.page-footer {
+    background: #000;
+    color: #fff;
+    padding: 3em;
+}
+
+.page-footer p {
+    color: #fff;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing-container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing-container {
+        max-width: 50em;
+        padding: 2em;
+    }
+}
+
+section:nth-of-type(even) .landing-container {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.collapse {
+    display: block;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+/* Background Circles */
+section:nth-of-type(odd) .landing-container::before {
+    background: rgba(255, 255, 255, 0.187);
+    border-radius: 50%;
+    content: '';
+    height: 20vh;
+    opacity: 0;
+    position: absolute;
+    transition: ease 0.5s all;
+    width: 20vh;
+    z-index: -5;
+}
+
+section:nth-of-type(even) .landing-container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    border-radius: 50%;
+    height: 10vh;
+    opacity: 0;
+    position: absolute;
+    right: 3em;
+    top: 3em;
+    transition: ease 0.5s all;
+    width: 10vh;
+    z-index: -5;
+}
+
+section:nth-of-type(3n) .landing-container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    border-radius: 50%;
+    bottom: 0;
+    height: 10vh;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: ease 0.5s all;
+    width: 10vh;
+    z-index: -5;
+}
+
+section:nth-of-type(3n + 1) .landing-container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    border-radius: 50%;
+    bottom: -5em;
+    height: 15vh;
+    opacity: 0;
+    position: absolute;
+    right: 20vw;
+    transition: ease 0.5s all;
+    width: 15vh;
+    z-index: -5;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+section.active {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.active .landing-container::before {
+    animation: rotate 4s linear 0s infinite forwards;
+    opacity: 1;
+}
+
+section.active .landing-container::after {
+    animation: rotate 5s linear 0s infinite forwards reverse;
+    opacity: 1;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em)
+		           rotate(-360deg);
+	}
+}
+
+/* Section Toggle Content */
+section .section-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+section .section-header .toggle-button {
+  background-color: #cbdefd;
+  border: none;
+  color: #041956;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  height: 35px;
+  text-align: center;
+  width: 35px;
+}
+
+section .landing-container h2 {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section:nth-of-type(even) .section-header {
+  justify-content: flex-end;
+}
+
+/* Buttons */
+/* Button Scroll To Top */
+#scroll-to-top {
+    background-color: #f00;
+    border-radius: 50%;
+    border: none;
+    bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    height: 70px;
+    padding: 15px;
+    position: fixed;
+    right: 30px;
+    width: 70px;
+    z-index: 6;
+}
+
+#scroll-to-top:hover,
+#scroll-to-top:active {
+    border: 4px solid #fff;
+}
+
+/* Button Call-To-Action */
+.cta-button {
+background-color: #f00;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.6);
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    height: 60px;
+    margin: 2em 2em 2em 0;
+    text-align: center;
+    width: 200px;
+}
+
+.cta-button:hover, .cta-button:active {
+    background: #f00;
+    box-shadow: none;
+    color: #fff;
+}
